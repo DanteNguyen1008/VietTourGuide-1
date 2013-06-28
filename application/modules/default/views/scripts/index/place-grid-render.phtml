@@ -6,7 +6,7 @@
 		<div id="sub_places_grid_1">
 		<?php foreach ($this->place_grid_data as $place) {?>
 			<div class="places_item">
-				<div id="image"><img width=79 height=48 src="<?= IMAGE_PLACE_FOLDER . $place['image_path']?>" />
+				<div id="image"><a href="place/view-place/id/<?=$place["place_id"]?>"><img width=79 height=48 src="<?= IMAGE_PLACE_FOLDER . $place['image_path']?>" /></a>
 				</div>
 				<div id="title">
 					<?=$place["place_name"]?>

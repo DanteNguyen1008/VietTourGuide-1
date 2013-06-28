@@ -5,7 +5,7 @@
 		</div>
 		<div id="main_menu">
 			<div id="main_menu_item"  class="active">
-				<a href="/">Home</a>
+				<a href="<?=$this->baseUrl()?>">Home</a>
 			</div>
 			<div id="main_menu_item">
 				<a href="javascript:void(0)">Festivals</a>
@@ -15,14 +15,14 @@
 				<ul class="sub_menu" style="display:none">
 					<?php
 					foreach ($this->lanscape_data as $lanscape) {
-						echo '<li><a href="#">' . $lanscape["type_name"] . '</a></li>';
+						echo '<li><a href="index/search-grid/id/' . $lanscape["type_name"] . '">' . $lanscape["type_name"] . '</a></li>';
 					}
 					?>
-				</ul>
-			</div>
+					</ul>
+					</div>
 
-			<div id="main_menu_item">
-				<a href="/">Guides</a>
+					<div id="main_menu_item">
+					<a href="/">Guides</a>
 			</div>
 		</div>
 		<div class="clearfix"></div>

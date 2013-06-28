@@ -48,20 +48,25 @@ class IndexController extends Zend_Controller_Action {
 		 $this->view->articles = $article_paginator;
 		 $this->view->articles_itemCount = $article_paginator->getCurrentItemCount();*/
 	}
-	
-	public function placeGridRenderAction()
-	{
+
+	public function placeGridRenderAction() {
 		$model_place = new Cp_Model_Place();
-		
-		$this->view->place_grid_data = $model_place->getall();
+
+		$this -> view -> place_grid_data = $model_place -> getall();
 	}
 
 	public function mainMenuRenderAction() {
 		//Load list place from database
 		$model_lanscape_type = new Cp_Model_LanscapeType();
-		
-		$rs = $model_lanscape_type->getall();
-		$this->view->lanscape_data = $rs;
+
+		$rs = $model_lanscape_type -> getall();
+		$this -> view -> lanscape_data = $rs;
+	}
+
+	public function searchGridAction() {
+		$lanscape_name = $this->_request->getParam('id');
+		$model_place = new Cp_Model_Place();
+		$this -> view ->place_list = $model_place->getPlaceByLanscapeName($lanscape_name);
 	}
 
 	public function menuRenderAction() {

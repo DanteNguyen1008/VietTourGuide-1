@@ -160,7 +160,6 @@ body {
 }
 
 #places_grid #sub_places_grid #sub_places_grid_1 {
-	overflow-y: scroll;
 	height: 156px;
 }
 
@@ -232,6 +231,24 @@ body {
 #main_menu_item ul.sub_menu li {
 	height: 17px;
 	padding: 5px 0px 0px 5px;
+}
+
+/*------------search grid--------------*/
+ul.grid_list {
+	text-align:left;
+}
+ul.grid_list li
+{
+	display: inline-block;
+	text-align:center;
+	padding: 10px;
+}
+
+ul.grid_list li .img
+{
+	width:200px;
+	height:130px;
+	overflow:hidden;
 }
 
 /**************footer**********/

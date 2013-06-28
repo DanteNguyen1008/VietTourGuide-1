@@ -1,0 +1,15 @@
+<div>
+	<ul class="grid_list">
+		<?php foreach ($this->place_list as $place) {?>
+			
+			<li>
+				<a href="place/view-place/id/<?=$place["place_id"]?>">
+				<div class="img"><img width=200 src="<?=IMAGE_PLACE_FOLDER . $place['image_path'] ?> " /></div>
+				<div class="name"><?=$place['place_name'] ?></div>
+				</a>
+			</li>
+			
+		<?php } ?>
+		
+	</ul>
+</div>
